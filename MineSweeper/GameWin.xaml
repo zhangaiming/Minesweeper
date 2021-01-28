@@ -1,0 +1,25 @@
+﻿<Window x:Name="Win" x:Class="MineSweeper.GameWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeper"
+        mc:Ignorable="d"
+        Title="MineSweeper" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <Style TargetType="local:MineButton">
+            <EventSetter Event="Click" Handler="MineButton_Click"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Background" Value="AntiqueWhite"/>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="MainGrid">
+        <Border x:Name="GameBorder" Margin="8,65,8,8" BorderBrush="Black" BorderThickness="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="GameGrid" Margin="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+        </Border>
+        <Button Name="Button_Back" Content="悔棋...?" HorizontalAlignment="Left" Height="27.6" Margin="10,10,0,0" VerticalAlignment="Top" Width="61.2" IsEnabled="False" Click="Button_Back_Click"/>
+        <Button Name="Button_Exit" Content="结束" HorizontalAlignment="Left" Height="27.6" Margin="92.997,10,0,0" VerticalAlignment="Top" Width="61.2" Click="Button_Exit_Click"/>
+    </Grid>
+</Window>

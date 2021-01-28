@@ -1,0 +1,32 @@
+﻿<Window x:Class="MineSweeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeper"
+        mc:Ignorable="d"
+        Title="MineSweeper" Height="134" Width="205" Background="White" ResizeMode="NoResize">
+    <Border BorderThickness="2,2,0,2">
+        <Grid Margin="0,0,0,-2">
+            <ComboBox Name="DifficultyBox"  HorizontalAlignment="Left" 
+                  Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="18"
+                  SelectedIndex="0" SelectionChanged="Box_Selected">
+                <ComboBoxItem Content="简单" FontSize="18"/>
+                <ComboBoxItem Content="普通" FontSize="18"/>
+                <ComboBoxItem Content="困难" FontSize="18"/>
+                <ComboBoxItem Content="自定义" FontSize="18"/>
+            </ComboBox>
+            <Button Content="开始!" HorizontalAlignment="Left" Height="30" 
+                Margin="100,10,0,0" VerticalAlignment="Top" Width="80" FontSize="18" Click="Button_Click">
+            </Button>
+            <Grid Margin="0,40,0,0">
+                <TextBox x:Name="Text_Num" HorizontalAlignment="Left" Height="18.433" Margin="90,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Text="5" FontSize="15"/>
+                <Label Content="炸弹数量" HorizontalAlignment="Left" Height="17.333" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Padding="0" FontSize="15"/>
+                <TextBox x:Name="Text_SizeX" HorizontalAlignment="Left" Height="19.567" Margin="90,33.433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" MaxLines="1" Text="8" FontSize="15"/>
+                <Label Content="地图大小" HorizontalAlignment="Left" Height="17.333" Margin="10,32.333,0,0" VerticalAlignment="Top" Width="75" Padding="0" FontSize="15"/>
+                <Label Content="X" HorizontalAlignment="Left" Height="17.333" Margin="125,33.433,0,0" VerticalAlignment="Top" Width="20" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="Text_SizeY" HorizontalAlignment="Left" Height="19.567" Margin="145,33.433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Text="8" FontSize="15"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
